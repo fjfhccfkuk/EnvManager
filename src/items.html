@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/style.css">
+        <script type="text/javascript" src="../js/network.js"></script>
+        <script type="text/javascript" src="../js/item-entry.js"></script>
+        <script type="text/javascript" src="../js/db.js"></script>
+    </head>
+
+    <body class="item-body" >
+            <!-- <div class="item-float">
+                <p>登录方式</p>
+                <p>---网关入口---</p><br>
+                <p>用户名:Username</p>
+                <p>密--码:Password</p>
+                <p>---行为管理---</p><br>
+                <p>用户名:Username</p>
+                <p>密--码:Password</p>
+
+            </div> -->
+
+            <div class="item-title" >
+                <p>____Kubernets____</p>      
+            </div>
+
+            <div class="item-area"">
+                <!-- 左侧栏 -->
+                <div class="item-area-l">
+                    <!-- <a class="item-entry item-font" align=left href="#">系统概览</a><br> -->
+                    <!-- <a class="item-entry item-font" align=left href="http://192.168.0.1">网关入口</a><br> -->
+                    <br>
+                    <button class="item-entry item-font" align=left onclick="ActivePage('../src/games/clumsy-bird-master/index.html')">系统概览</button><br>
+                    <!-- <a class="item-entry item-font" align=left href="../src/item-entry/192.168.0.1.html">网关入口</a><br> -->
+                    <button class="item-entry item-font" align=left onclick="ActivePage('http://192.168.0.1')">网关入口</button><br>
+                    <button class="item-entry item-font" align=left onclick="doTestMessage('zzzz')">MsgTest</button><br>
+                    <button class="item-entry item-font" align=left onclick="ActivePage('http://www.baidu.com')">重置页面</button><br>                    
+                    <!-- <a class="item-entry item-font" align=left href="https://192.168.0.2">行为管理</a><br> -->
+                    <button class="item-entry item-font" align=left onclick="ActivePage('https://192.168.0.2')">行为管理</button><br>                    
+                    <!-- <a class="item-entry item-font" align=left href="./item-entry/devices.html">设备管理</a><br> -->
+                    <button class="item-entry item-font" align=left onclick="ActivePage('./item-entry/devices.html')">设备管理</button><br>
+                    
+                    <button class="item-entry item-font" align=left onclick="initDatabase()">数据库-新</button><br>
+                    <button class="item-entry item-font" align=left onclick="setValueToDb()">数据库-写</button><br>
+                    <button class="item-entry item-font" align=left onclick="getValueFromDb()">数据库-读</button><br>
+                    
+                </div>
+
+                <!-- 右侧栏 -->
+                <div class="item-area-r" id=areaContent >
+                    <!-- <iframe src="../src/games/clumsy-bird-master/index.html" style="width: 100%; height: 100%;"> -->
+                        <!-- <iframe src="http://192.168.0.1" style="width: 100%; height: 100%;"></iframe> -->
+                    <iframe id="embedFrame" src="../src/games/clumsy-bird-master/index.html" style="width: 100%; height: 100%;"></iframe>
+                    <!-- <iframe id="embedFrame"  style="width: 100%; height: 100%;"></iframe> -->
+                </div>
+            </div>
+       <!-- </div>  -->
+    </body>
+</html>
