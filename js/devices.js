@@ -26,15 +26,16 @@ function Printer(_dev, sAddr, sLocation){
 
 function FuncTest() {
 
+    alert("onClick")
     console.log("Function item-entry test.")
-    child(executablePath, function(err, data) {
-        if(err){
-           console.error(err);
-           return;
-        }
+    // child(executablePath, function(err, data) {
+    //     if(err){
+    //        console.error(err);
+    //        return;
+    //     }
      
-        console.log(data.toString());
-    });
+    //     console.log(data.toString());
+    // });
 }
 
 function systemCall() {

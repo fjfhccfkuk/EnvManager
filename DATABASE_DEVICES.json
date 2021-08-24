@@ -1,3 +1,6 @@
 {
-  "DATABASE_DEVICES": []
+  "DATABASE_DEVICES": [
+    null,
+    null
+  ]
 }

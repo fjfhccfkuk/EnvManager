@@ -4,7 +4,7 @@ const path = require('path');
 const _db_devs_name = "DATABASE_DEVICES"
 
 var _dbHolder = null
-var dbLocation = path.join("./","")
+var dbLocation = path.join("/tmp/","db")
 
 function db_list() {}
 
@@ -24,40 +24,27 @@ function getDevsDBName() {
 }
 
 function initDatabase() {
-        _initDatabases(_db_devs_name)
-        // _initDatabases(...)
+        _initDatabases(getDevsDBName())
 }
 
-function setValueToDb(dbtable = '', obj = null) {
+function setValueToDb(dbtable = '', data = null, cb) {
     // try to write data
-    if (obj) {
+    if (DB.valid(dbtable, dbLocation) && data) {
         DB.insertTableContent(dbtable, dbLocation ,data, (ret, msg) => {
             console.log("Success: " + ret);
             console.log("Message: " + msg);
+            if(ret && cb) {
+                cb(ret)
+            }
         })
-
-        return
     }
-
-    // {
-    //     let data = new Object();
-    //     data.name = "Wali"                    
-    //     data.age = 24
-    //     data.addr = "Beijing,chaoyang "
-
-    //     DB.insertTableContent(dbtable, dbLocation ,data, (ret, msg) => {
-    //         console.log("Success: " + ret);
-    //         console.log("Message: " + msg);
-    //     })
-    // }
 };
 
 function getValueFromDb(dbtable = 'sysinfo', cb = null, key = null) {
     DB.getAll(dbtable, dbLocation,(ret, msg) => {
         console.log("msg:" + msg)
-        if (ret) {
-            values = "aabbcc"
-            if (cb) {cb(msg)}
+        if (ret && cb) {
+            cb(msg)
         }
     })
 }

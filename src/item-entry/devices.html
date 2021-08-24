@@ -25,18 +25,18 @@
             <!-- 右侧栏 -->
             <div class="item-area-r" id=areaContent >
                 <div style="margin-bottom: 20px;">
-                    <label>设备名称</label><input type="text" value="HP打印机">
-                    <label>设备类型</label><input type="text" value="打印机">
-                    <label>设备地址</label><input type="text" value="北京财富中心写字楼">
-                    <label>设备位置</label><input type="text" value="楼层 3703">
-                    <button>添加设备</button>
+                    <label>设备名称</label><input id="dev_name" type="text" value="HP打印机">
+                    <label>设备类型</label><input id="dev_type" type="text" value="打印机">
+                    <label>设备地址</label><input id="dev_addr" type="text" value="北京财富中心写字楼">
+                    <label>设备位置</label><input id="dev_location" type="text" value="楼层 3703">
+
+                    <button id="btn_new">添加设备</button>
                     <button>删除</button>
                     <button id="btn_fresh" >刷新</button>
                 </div>
         
-                <p id="t_p">aa</p>
                 <div id="tb_div">
-                    <table class="dev-tb">
+                    <table id="tb_table" class="dev-tb">
                         <th>编号</th><th>设备名称</th><th>设备类型</th><th>设备地址</th><th>设备位置</th><th>添加</th>
                         <tr><td>01</td><td>dType</td><td>电子开关</td><td>192.0.0.1</td><td>3703</td><td><button onclick="FuncTest()">执行</button></td></tr>
                         <tr><td>02</td><td>dType</td><td>电子开关</td><td>192.0.0.1</td><td>3703</td><td><a href="#" style="color: blue;">执行</a></td></tr>
@@ -57,14 +57,50 @@
 
         <script>
             document.getElementById("btn_fresh").onclick = function () {
-                var tb = document.getElementById("tb_div")
-                // tb.innerHTML = ""
-
-                // 读取数据库
-                // 异步调用
+                var tb = document.getElementById("tb_table")
                 getValueFromDb(getDevsDBName(), function(ret){
                     tb.innerHTML = (ret.length == 0)?"empty":"data enable";
+
+                    var std = "<th>编号</th><th>设备名称</th><th>设备类型</th><th>设备地址</th><th>设备位置</th><th>添加</th>"
+                    var i = 0
+                    var count = ret.length
+                    while(i < count) {
+                        var ele = ret[i]
+                        if (!ele) {continue}
+
+                        // <tr><td>01</td><td>dType</td><td>电子开关</td><td>192.0.0.1</td><td>3703</td><td><button onclick="FuncTest()">执行</button></td></tr>
+                        std += "<tr><td>"+i+"</td><td>"+ele.type+"</td><td>"+ele.name+"</td><td>"+ele.addr+"</td><td>"+ele.location+"</td><td><button onclick=\"FuncTest()\">执行</button></td></tr>"                        
+
+                        i ++
+                    }
+
+                    tb.innerHTML = std
                 })                
+            };
+
+            function getVal(id) {
+                var ele = document.getElementById(id)
+                if (!ele) {return null}
+                return ele.value;
+            }
+
+            document.getElementById("btn_new").onclick = function () {
+                var dev_name = getVal("dev_name");
+                var dev_type = getVal("dev_type");
+                var dev_addr = getVal("dev_addr");
+                var dev_location = getVal("dev_location");
+
+                if (dev_name && dev_type && dev_addr && dev_location) {
+                    var dev = new Object();
+                    dev.name = dev_name;
+                    dev.type = dev_type;
+                    dev.addr = dev_addr;
+                    dev.location=dev_location;
+
+                    setValueToDb(getDevsDBName(), dev, function(ret){
+                        console.log("sdasdfasfda")
+                    })
+                }
             };
 
 
