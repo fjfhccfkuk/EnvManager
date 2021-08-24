@@ -1,35 +1,77 @@
 <html>
     <head>
         <link rel="stylesheet" href="../../css/devs.css">
-        <link rel="stylesheet" href="../../css/style.css">
-        <script type="text/javascript" src="../../js/item-entry.js"></script>
+        <link rel="stylesheet" href="../../css/style.css">        
+        <script type="text/javascript" src="../../js/db.js"></script>
         <script type="text/javascript" src="../../js/devices.js"></script>
+        <script type="text/javascript" src="../../js/item-entry.js"></script>
+        
+        
     </head>
 
     <body>
-        <div style="margin-bottom: 20px;">
-            <label>设备名称</label><input type="text" value="HP打印机">
-            <label>设备类型</label><input type="text" value="打印机">
-            <label>设备地址</label><input type="text" value="北京财富中心写字楼">
-            <label>设备位置</label><input type="text" value="楼层 3703">
-            <button>添加设备</button>
+
+        <div class="item-area"">
+            <!-- 左侧栏 -->
+            <div class="item-area-l">
+                <br>
+                <button class="item-entry item-font" align=left onclick="ActivePage('../src/games/clumsy-bird-master/index.html')">系统概览</button><br>
+                <button class="item-entry item-font" align=left onclick="ActivePage('http://192.168.0.1')">网关入口</button><br>
+                <button class="item-entry item-font" align=left onclick="ActivePage('http://www.baidu.com')">重置页面</button><br>
+                <button class="item-entry item-font" align=left onclick="ActivePage('https://192.168.0.2')">行为管理</button><br>
+                <button class="item-entry item-font" align=left onclick="ActivePage('./item-entry/devices.html')">设备管理</button><br>
+            </div>
+
+            <!-- 右侧栏 -->
+            <div class="item-area-r" id=areaContent >
+                <div style="margin-bottom: 20px;">
+                    <label>设备名称</label><input type="text" value="HP打印机">
+                    <label>设备类型</label><input type="text" value="打印机">
+                    <label>设备地址</label><input type="text" value="北京财富中心写字楼">
+                    <label>设备位置</label><input type="text" value="楼层 3703">
+                    <button>添加设备</button>
+                    <button>删除</button>
+                    <button id="btn_fresh" >刷新</button>
+                </div>
+        
+                <p id="t_p">aa</p>
+                <div id="tb_div">
+                    <table class="dev-tb">
+                        <th>编号</th><th>设备名称</th><th>设备类型</th><th>设备地址</th><th>设备位置</th><th>添加</th>
+                        <tr><td>01</td><td>dType</td><td>电子开关</td><td>192.0.0.1</td><td>3703</td><td><button onclick="FuncTest()">执行</button></td></tr>
+                        <tr><td>02</td><td>dType</td><td>电子开关</td><td>192.0.0.1</td><td>3703</td><td><a href="#" style="color: blue;">执行</a></td></tr>
+                        <tr><td>03</td><td>dType</td><td>电子开关</td><td>192.0.0.1</td><td>3703</td><td><a href="#" style="color: blue;">执行</a></td></tr>
+                        <tr><td>04</td><td>dType</td><td>电子开关</td><td>192.0.0.1</td><td>3703</td><td><a href="#" style="color: blue;">执行</a></td></tr>
+                        <tr><td>05</td><td>dType</td><td>电子开关</td><td>192.0.0.1</td><td>3703</td><td><a href="#" style="color: blue;">执行</a></td></tr>
+                        <tr><td>06</td><td>dType</td><td>电子开关</td><td>192.0.0.1</td><td>3703</td><td><a href="#" style="color: blue;">执行</a></td></tr>
+                        <tr><td>07</td><td>dType</td><td>电子开关</td><td>192.0.0.1</td><td>3703</td><td><a href="#" style="color: blue;">执行</a></td></tr>
+                        <tr><td>08</td><td>dType</td><td>电子开关</td><td>192.0.0.1</td><td>3703</td><td><a href="#" style="color: blue;">执行</a></td></tr>
+                        <tr><td>09</td><td>dType</td><td>电子开关</td><td>192.0.0.1</td><td>3703</td><td><a href="#" style="color: blue;">执行</a></td></tr>
+                        <tr><td>10</td><td>dType</td><td>电子开关</td><td>192.0.0.1</td><td>3703</td><td><a href="#" style="color: blue;">执行</a></td></tr>
+                    </table>
+                </div> 
+            </div>
         </div>
 
-        <div>
-            <table class="dev-tb">
-                <th>编号</th><th>设备名称</th><th>设备类型</th><th>设备地址</th><th>设备位置</th><th>添加</th>
-                <tr><td>01</td><td>dType</td><td>电子开关</td><td>192.0.0.1</td><td>3703</td><td><button onclick="FuncTest()">执行</button></td></tr>
-                <tr><td>02</td><td>dType</td><td>电子开关</td><td>192.0.0.1</td><td>3703</td><td><a href="#" style="color: blue;">执行</a></td></tr>
-                <tr><td>03</td><td>dType</td><td>电子开关</td><td>192.0.0.1</td><td>3703</td><td><a href="#" style="color: blue;">执行</a></td></tr>
-                <tr><td>04</td><td>dType</td><td>电子开关</td><td>192.0.0.1</td><td>3703</td><td><a href="#" style="color: blue;">执行</a></td></tr>
-                <tr><td>05</td><td>dType</td><td>电子开关</td><td>192.0.0.1</td><td>3703</td><td><a href="#" style="color: blue;">执行</a></td></tr>
-                <tr><td>06</td><td>dType</td><td>电子开关</td><td>192.0.0.1</td><td>3703</td><td><a href="#" style="color: blue;">执行</a></td></tr>
-                <tr><td>07</td><td>dType</td><td>电子开关</td><td>192.0.0.1</td><td>3703</td><td><a href="#" style="color: blue;">执行</a></td></tr>
-                <tr><td>08</td><td>dType</td><td>电子开关</td><td>192.0.0.1</td><td>3703</td><td><a href="#" style="color: blue;">执行</a></td></tr>
-                <tr><td>09</td><td>dType</td><td>电子开关</td><td>192.0.0.1</td><td>3703</td><td><a href="#" style="color: blue;">执行</a></td></tr>
-                <tr><td>10</td><td>dType</td><td>电子开关</td><td>192.0.0.1</td><td>3703</td><td><a href="#" style="color: blue;">执行</a></td></tr>
-            </table>
-        </div>
 
+
+        <script>
+            document.getElementById("btn_fresh").onclick = function () {
+                var tb = document.getElementById("tb_div")
+                // tb.innerHTML = ""
+
+                // 读取数据库
+                // 异步调用
+                getValueFromDb(getDevsDBName(), function(ret){
+                    tb.innerHTML = (ret.length == 0)?"empty":"data enable";
+                })                
+            };
+
+
+            // function tb_modify
+
+            //
+            //const ejse = require('ejs-electron')
+        </script>
     </body>
 </html>
