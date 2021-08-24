@@ -2,17 +2,23 @@
     <head>
         <link rel="stylesheet" href="../../css/devs.css">
         <link rel="stylesheet" href="../../css/style.css">
+        <script type="text/javascript" src="../../js/item-entry.js"></script>
+        <script type="text/javascript" src="../../js/devices.js"></script>
     </head>
 
     <body>
-        <!-- <div>
-            <p class="item-title">设备管理</a></p><br>            
-        </div> -->
+        <div style="margin-bottom: 20px;">
+            <label>设备名称</label><input type="text" value="HP打印机">
+            <label>设备类型</label><input type="text" value="打印机">
+            <label>设备地址</label><input type="text" value="北京财富中心写字楼">
+            <label>设备位置</label><input type="text" value="楼层 3703">
+            <button>添加设备</button>
+        </div>
 
         <div>
             <table class="dev-tb">
                 <th>编号</th><th>设备名称</th><th>设备类型</th><th>设备地址</th><th>设备位置</th><th>添加</th>
-                <tr><td>01</td><td>dType</td><td>电子开关</td><td>192.0.0.1</td><td>3703</td><td><a href="#" style="color: blue;">执行</a></td></tr>
+                <tr><td>01</td><td>dType</td><td>电子开关</td><td>192.0.0.1</td><td>3703</td><td><button onclick="FuncTest()">执行</button></td></tr>
                 <tr><td>02</td><td>dType</td><td>电子开关</td><td>192.0.0.1</td><td>3703</td><td><a href="#" style="color: blue;">执行</a></td></tr>
                 <tr><td>03</td><td>dType</td><td>电子开关</td><td>192.0.0.1</td><td>3703</td><td><a href="#" style="color: blue;">执行</a></td></tr>
                 <tr><td>04</td><td>dType</td><td>电子开关</td><td>192.0.0.1</td><td>3703</td><td><a href="#" style="color: blue;">执行</a></td></tr>
@@ -23,6 +29,7 @@
                 <tr><td>09</td><td>dType</td><td>电子开关</td><td>192.0.0.1</td><td>3703</td><td><a href="#" style="color: blue;">执行</a></td></tr>
                 <tr><td>10</td><td>dType</td><td>电子开关</td><td>192.0.0.1</td><td>3703</td><td><a href="#" style="color: blue;">执行</a></td></tr>
             </table>
-        </div>        
+        </div>
+
     </body>
 </html>
