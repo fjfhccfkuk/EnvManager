@@ -1,6 +1,13 @@
 {
   "DATABASE_DEVICES": [
     null,
-    null
+    null,
+    {
+      "name": "HP打印机",
+      "type": "打印机",
+      "addr": "北京财富中心写字楼",
+      "location": "楼层 3703",
+      "id": 1629801041870
+    }
   ]
 }
