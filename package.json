@@ -1,6 +1,6 @@
 {
   "name": "env-manager",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
@@ -14,7 +14,8 @@
       "category": "tHome.deb",
       "directories": [
         "./",
-        "./src"
+        "./src",
+        "./src/item-entry/dashboard"
       ],
       "scripts": {
         "pack": "electron-builder --dir",
@@ -41,7 +42,7 @@
     "@electron-forge/maker-zip": "^6.0.0-beta.59",
     "child_process": "^1.0.2",
     "ejs-electron": "^2.1.1",
-    "electron": "^13.2.1"
+    "electron": "^13.2.2"
   },
   "dependencies": {
     "electron-db": "^0.15.7",
