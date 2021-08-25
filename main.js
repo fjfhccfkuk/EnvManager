@@ -11,7 +11,7 @@ function createWindow () {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
     width: 1600,
-    height: 900,
+    height: 1000,
     webPreferences: {
       webviewTag: true,
       webSecurity: false,
