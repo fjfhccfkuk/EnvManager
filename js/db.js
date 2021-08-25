@@ -1,10 +1,10 @@
 const fs_path = require('path')
 const DB = require('electron-db');
 const path = require('path');
-const _db_devs_name = "DATABASE_DEVICES"
+const _db_devs_name = "devDb"
 
 var _dbHolder = null
-var dbLocation = path.join("/tmp/","db")
+var dbLocation = path.join("","")
 
 function db_list() {}
 
