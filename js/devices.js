@@ -24,4 +24,7 @@ function Printer(_dev, sAddr, sLocation){
     }
 }
 
+function FuncTest() {
+    alert("Click")
+}
 
