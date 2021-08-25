@@ -11,7 +11,7 @@ function createWindow () {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
     width: 1600,
-    height: 1000,
+    height: 900,
     webPreferences: {
       webviewTag: true,
       webSecurity: false,
@@ -27,6 +27,8 @@ function createWindow () {
   mainWindow.loadFile('src/login.html')
   // mainWindow.setMenu(Electron.Menu({"ada":"Hello"}))
   mainWindow.setMenu(null)
+  mainWindow.maximize()
+
   mainWindow.webContents.session.webRequest.onHeadersReceived(
     {urls: ['*://*/*']},
     (details, callback) => {
