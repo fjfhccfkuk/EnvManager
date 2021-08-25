@@ -155,7 +155,7 @@ a {
 
 .item-area-l {
     float: left;
-    background: linear-gradient(to bottom, #303031aa, #000000);
+    background: linear-gradient(to bottom, #c0a387aa, #807d7d);
     width: 12%;
     height: 100%;
     margin: 0px;
@@ -183,7 +183,7 @@ a {
     cursor: pointer;
     border-radius: 1em;
     color: #fff;
-    background: linear-gradient(to right, rgb(58, 199, 217), rgb(178, 162, 180));
+    background: linear-gradient(to bottom, rgb(178, 214, 219), rgb(135, 136, 98));
     border: 0;
 
     padding-left: 1.5em;
@@ -196,7 +196,7 @@ a {
 }
 
 .item-entry:active {
-    background: linear-gradient(to right,  rgb(178, 162, 180), rgb(58, 199, 217));
+    background: linear-gradient(to bottom, rgb(135, 136, 98),rgb(178, 214, 219));
 }
 
 
