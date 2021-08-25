@@ -1,6 +1,6 @@
 {
   "name": "env-manager",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
