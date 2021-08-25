@@ -181,13 +181,13 @@ a {
 
 .item-entry {
     cursor: pointer;
-    /* border-radius: 1em; */
+    border-radius: 1em;
     color: #fff;
     background: linear-gradient(to right, rgb(58, 199, 217), rgb(178, 162, 180));
     border: 0;
 
-    padding-left: 1em;
-    padding-right: 1em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
     padding-top: 2px;
     padding-bottom: 2px;
 
