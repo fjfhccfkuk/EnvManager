@@ -1,53 +1,25 @@
 {
-  "name": "env-manager",
-  "version": "1.0.5",
-  "description": "A minimal Electron application",
+  "name": "EnvManager",
+  "version": "2.0.0",
   "main": "main.js",
-  "scripts": {
-    "start": "electron-forge start",
-    "package": "electron-forge package",
-    "make": "electron-forge make"
-  },
-  "build": {
-    "appId": "tHome.9900000001",
-    "linux": {
-      "category": "tHome.deb",
-      "directories": [
-        "./",
-        "./src",
-        "./src/item-entry/dashboard"
-      ],
-      "scripts": {
-        "pack": "electron-builder --dir",
-        "dist": "electron-builder"
-      }
-    }
-  },
-  "repository": "https://github.com/electron/electron-quick-start",
-  "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
-  ],
-  "icon": "icons/elec-app-log",
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "repository": "https://github.com/fjfhccfkuk/EnvManager.git",
+  "author": "<fjfhccfkuk>",
+  "license": "MIT",
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0-beta.59",
     "@electron-forge/maker-deb": "^6.0.0-beta.59",
     "@electron-forge/maker-rpm": "^6.0.0-beta.59",
     "@electron-forge/maker-squirrel": "^6.0.0-beta.59",
     "@electron-forge/maker-zip": "^6.0.0-beta.59",
-    "child_process": "^1.0.2",
-    "ejs-electron": "^2.1.1",
-    "electron": "^13.2.2"
+    "electron": "13.2.2"
   },
   "dependencies": {
-    "electron-db": "^0.15.7",
-    "electron-squirrel-startup": "^1.0.0",
-    "rpmbuild": "^0.0.23"
+    "electron-squirrel-startup": "^1.0.0"
+  },
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
   },
   "config": {
     "forge": {
@@ -56,17 +28,8 @@
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
-            "name": "electron_quick_start",
-            "authors": "hsx of SDT",
-            "exe": "windows10.exe",
-            "noMsi": true,
-            "remoteReleases": "",
-            "certificateFile": "./cert.pfx",
-            "certificatePassword": "this-is-a-secret"
-          },
-          "platforms": [
-            "win_x64"
-          ]
+            "name": "EnvManager"
+          }
         },
         {
           "name": "@electron-forge/maker-zip",
@@ -76,6 +39,10 @@
         },
         {
           "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
           "config": {}
         }
       ]
