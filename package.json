@@ -11,11 +11,18 @@
     "@electron-forge/maker-rpm": "^6.0.0-beta.59",
     "@electron-forge/maker-squirrel": "^6.0.0-beta.59",
     "@electron-forge/maker-zip": "^6.0.0-beta.59",
-    "electron": "13.2.2",
-    "electron-db": "^0.15.7"
+    "electron": "13.2.2"
+  },
+  "homepage": "./",
+  "build":{
+    "directories": {
+      "buildResources": "./",
+      "app": "/home/youmi/"
+    }
   },
   "dependencies": {
-    "electron-squirrel-startup": "^1.0.0"
+    "electron-squirrel-startup": "^1.0.0",
+    "electron-db": "^0.15.7"
   },
   "description": "dddddddddd",
   "scripts": {
